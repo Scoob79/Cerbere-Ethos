@@ -33,4 +33,14 @@ Liaison Pool : OK
 
 Vitesse actuelle de la pool : 892 Th
 
+# Adaptation du script
+
+Pour Nanopool par exemple :
+
+remplacer la ligne `retour=$(curl -s -X POST -H "Content-Type: application/json" $pool | jq .x16r.hashrate)` par `retour=$(curl -s -X GET -H "Content-Type: application/json" $pool | jq .data)`.
+
+N'oubliez pas d'adapter la  division à la ligne suivante `let retour=$retour/1000000000`.
+
+Le but étant via les API de récupérer le Hashrate de la pool.
+
 @KASPAR Olivier
