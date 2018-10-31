@@ -9,9 +9,9 @@ Ce script permet de surveiller un miner Ethos, il control le fichier de configur
 - ctrl+x
 
 Le rendre executable
-`chmod +x ./cerbere.sh`
+- `chmod +x ./cerbere.sh`
 
-C'est tout
+C'est tout :thumbsup:
 
 # Utilisation
 
@@ -32,3 +32,5 @@ Vitesse actuelle du miner 23 /H
 Liaison Pool : OK
 
 Vitesse actuelle de la pool : 892 Th
+
+@KASPAR Olivier
