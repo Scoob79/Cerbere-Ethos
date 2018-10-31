@@ -20,9 +20,9 @@
  ##########################################################################################
 
 # Liste des paramétrages
-API_Key="o.XwShYtgQ3h3QU7c1lOJ2kNFkz8n0uen4"
+API_Key="Votre clé API"
 pool="https://ravenminer.com/api"
-limit_hash=18
+limit_hash=18 # en dessous de cette limite il considère que le HASH est mort et redémarre le miner 
 
 message (){
 # envoie un message collectif
