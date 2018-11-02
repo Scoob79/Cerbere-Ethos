@@ -11,6 +11,7 @@ Ce script permet de surveiller un miner Ethos, il control le fichier de configur
 Le rendre executable
 - `chmod +x ./cerbere.sh`
 
+
 C'est tout :thumbsup:
 
 # Utilisation
