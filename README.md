@@ -11,6 +11,13 @@ Ce script permet de surveiller un miner Ethos, il control le fichier de configur
 Le rendre executable
 - `chmod +x ./cerbere.sh`
 
+Pour le programmer dans cron, sur ubuntu editez le fichier /var/spool/cron/crontabs/root et rajoutez ces lignes :
+
+`0,5,10,15,20,25,30,35,40,45,50,55 * * * * /media/www/cerbere.sh #Cerbere`
+
+`0 8,12,20 * * * /media/www/cerbere.sh --rapport #Cerbere Rapport Journalier`
+
+`* * * * * /media/www/cerbere.sh --push #Cerbere Surveillance de push`
 
 C'est tout :thumbsup:
 
