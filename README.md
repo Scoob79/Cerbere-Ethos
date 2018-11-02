@@ -48,5 +48,6 @@ Le but étant via les API de récupérer le Hashrate de la pool.
 Une version V2 a été créée avec la séparation de la partie pushbullet
 
 ### !!! ATTENTION elle necéssite le script Pushbullet disponible sur mon compte
+https://github.com/Scoob79/Pushbullet
 
 @KASPAR Olivier
