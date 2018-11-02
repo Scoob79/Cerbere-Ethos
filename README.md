@@ -43,4 +43,10 @@ N'oubliez pas d'adapter la  division à la ligne suivante `let retour=$retour/10
 
 Le but étant via les API de récupérer le Hashrate de la pool.
 
+# New version V2
+
+Une version V2 a été créée avec la séparation de la partie pushbullet
+
+### !!! ATTENTION elle necéssite le script Pushbullet disponible sur mon compte
+
 @KASPAR Olivier
