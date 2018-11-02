@@ -27,6 +27,8 @@ C'est tout :thumbsup:
 
 `./cerbere.sh --rapport` Lance la vérification, envoi un push s'il y a un problème sinon envoi un push avec un rapport
 
+`./cerbere.sh --push` Vérifie si il n'ya pas une demande de rapport sur le flux pushbullet
+
 # Exemple de rapport
 
 Fichier de configuration : OK
