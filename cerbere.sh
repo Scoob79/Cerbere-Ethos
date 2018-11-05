@@ -96,10 +96,10 @@ else
 	message "$titre", "$pool"
 fi
 
-if [ local1="Fichier de configuration : OK" ]; then control=$control+1;fi
-if [ internet="Connexion Internet : OK"  ]; then control=$control+2;fi
-if [ hash1="Hash : OK" ]; then control=$control+3;fi
-if [ pool="Liaison Pool : OK" ]; then control=$control+4;fi
+if [ "$local1" == "Fichier de configuration : OK" ]; then control=$control+1;tl="ok";fi
+if [ "$internet" == "Connexion Internet : OK"  ]; then control=$control+2;ti="ok";fi
+if [ "$hash1" == "Hash : OK" ]; then control=$control+3;th="ok";fi
+if [ "$pool" == "Liaison Pool : OK" ]; then control=$control+4;tp="ok";fi
 
 
 rapport1 (){
@@ -184,14 +184,52 @@ $poolhash"
 }
 
 if [ "$1" == "--rapport" ]; then
-	if [ "$control" == "+1+2+3+4" ]; then
-		rnd=$(($RANDOM*4/32767))
-		echo $rnd
-		if [ "$rnd" == 0 ]; then rapport1;fi
-		if [ "$rnd" == 1 ]; then rapport2;fi
-		if [ "$rnd" == 2 ]; then rapport3;fi
-		if [ "$rnd" == 3 ]; then rapport4;fi
+
+	rnd=$(($RANDOM*4/32767))
+	if [ -z $tl ]; then 
+	    local1="
+==================================
+!!! ATTENTION !!! $local1 
+une erreur à été détectée dans le fichier de configuration.
+$local2
+==================================
+"
 	fi
+
+	if [ -z $ti ]; then 
+	    internet="
+==================================
+!!! ATTENTION !!! $internet
+une erreur à été détectée lors du test de la connexion internet.
+==================================
+"
+	fi
+
+	if [ -z $th ]; then 
+	    hash1="
+==================================
+!!! ATTENTION !!! $hash1 
+une erreur à été détectée lors du de la vérification de la vitesse de hash.
+$hash2
+==================================
+"
+	fi
+
+	if [ -z "$tp" ]; then 
+	    pool="
+==================================
+!!! ATTENTION !!! $pool
+une erreur à été détectée dde la récupération de la vitesse de hash de la pool.
+Cela peut venir de la pool qui ne répond plus ou de l'API de la pool.
+==================================
+"
+	fi
+
+	if [ "$rnd" == 0 ]; then rapport1;fi
+	if [ "$rnd" == 1 ]; then rapport2;fi
+	if [ "$rnd" == 2 ]; then rapport3;fi
+	if [ "$rnd" == 3 ]; then rapport4;fi
+
 fi
 exit 0
 
