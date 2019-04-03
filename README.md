@@ -4,7 +4,7 @@ Ce script permet de surveiller un miner Ethos, il control le fichier de configur
 
 - `nano cerbere.sh`
 - copie collé du code
-- Modifier les trois valeurs en haut (API_Key, pool et limit_hash)
+- Modifier les trois valeurs en haut (API_Key Pushbullet, pool et limit_hash)
 * !!! Attention !!! la vérification de la liaison avec la pool est prévue pour cette pool (ravenminer) pour une autre pool il faudrat l'adapter
 - ctrl+x
 
